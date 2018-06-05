@@ -1,0 +1,950 @@
+digraph "SchemaCrawler_Diagram" {
+
+  graph [
+    fontname="Helvetica"
+    labeljust="r"
+    rankdir="RL"
+
+  ];
+  
+  node [
+    fontname="Helvetica"
+    shape="none"
+
+  ];
+  
+  edge [
+    fontname="Helvetica"
+
+  ];
+
+
+  /* Title Block -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  graph [ 
+    label="ISFOL DATA"
+  ];
+
+  /* enti -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "enti_30093d" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>enti</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='id_ente_684e57e1.start' align='left'>id_ente</td>
+		<td align='left'> </td>
+		<td port='id_ente_684e57e1.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='desc_ente_5e29e02b.start' align='left'>desc_ente</td>
+		<td align='left'> </td>
+		<td port='desc_ente_5e29e02b.end' align='left'>VARCHAR(150) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='testo_c636c80.start' align='left'>testo</td>
+		<td align='left'> </td>
+		<td port='testo_c636c80.end' align='left'>VARCHAR(255)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_ateco_livello1 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_ateco_livello1_9bfc9a75" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_ateco_livello1</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello1_7c4777fd.start' align='left'><b><i>pk_livello1</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello1_7c4777fd.end' align='left'>CHAR(1) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_e3ca6344.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_e3ca6344.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='descrizione_7d54397a.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_7d54397a.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='help_e3c7836c.start' align='left'>help</td>
+		<td align='left'> </td>
+		<td port='help_e3c7836c.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_ateco_livello2 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_ateco_livello2_9bfc9a76" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_ateco_livello2</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='codice_92d1b65d.start' align='left'>codice</td>
+		<td align='left'> </td>
+		<td port='codice_92d1b65d.end' align='left'>VARCHAR(5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='pk_livello2_7c47781d.start' align='left'><b><i>pk_livello2</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello2_7c47781d.end' align='left'>VARCHAR(5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_e3ca6363.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_e3ca6363.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='descrizione_7d543999.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_7d543999.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='fk_livello1_ab587c92.start' align='left'>fk_livello1</td>
+		<td align='left'> </td>
+		<td port='fk_livello1_ab587c92.end' align='left'>CHAR(1)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_ateco_livello3 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_ateco_livello3_9bfc9a77" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_ateco_livello3</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello1_e2c78cbf.start' align='left'>cod_ateco_livello1</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello1_e2c78cbf.end' align='left'>VARCHAR(11) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello2_e2c78cc0.start' align='left'>cod_ateco_livello2</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello2_e2c78cc0.end' align='left'>VARCHAR(111) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello3_e2c78cc1.start' align='left'>cod_ateco_livello3</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello3_e2c78cc1.end' align='left'>VARCHAR(222) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='descrizione_7d5439b8.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_7d5439b8.end' align='left'>VARCHAR(222) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_ateco_livello4 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_ateco_livello4_9bfc9a78" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_ateco_livello4</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello1_e2c78cde.start' align='left'>cod_ateco_livello1</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello1_e2c78cde.end' align='left'>VARCHAR(11) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello2_e2c78cdf.start' align='left'>cod_ateco_livello2</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello2_e2c78cdf.end' align='left'>VARCHAR(111) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello3_e2c78ce0.start' align='left'>cod_ateco_livello3</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello3_e2c78ce0.end' align='left'>VARCHAR(11) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello4_e2c78ce1.start' align='left'>cod_ateco_livello4</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello4_e2c78ce1.end' align='left'>VARCHAR(222) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='descrizione_7d5439d7.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_7d5439d7.end' align='left'>VARCHAR(222) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_ateco_livello5 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_ateco_livello5_9bfc9a79" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_ateco_livello5</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello1_e2c78cfd.start' align='left'>cod_ateco_livello1</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello1_e2c78cfd.end' align='left'>VARCHAR(11) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello2_e2c78cfe.start' align='left'>cod_ateco_livello2</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello2_e2c78cfe.end' align='left'>VARCHAR(111) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_ateco_livello3_e2c78cff.start' align='left'>cod_ateco_livello3</td>
+		<td align='left'> </td>
+		<td port='cod_ateco_livello3_e2c78cff.end' align='left'>VARCHAR(222) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='descrizione_7d5439f6.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_7d5439f6.end' align='left'>VARCHAR(222) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_ateco_professioni -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_ateco_professioni_1f84644" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_ateco_professioni</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_professioni_dd880ce5.start' align='left'><b><i>pk_professioni</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_professioni_dd880ce5.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_3d443155.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_3d443155.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='fk_livello6_4d24a89.start' align='left'>fk_livello6</td>
+		<td align='left'> </td>
+		<td port='fk_livello6_4d24a89.end' align='left'>VARCHAR(255)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_competenze -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_competenze_be88f5d8" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_competenze</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='fk_livello5_da578d74.start' align='left'>fk_livello5</td>
+		<td align='left'> </td>
+		<td port='fk_livello5_da578d74.end' align='left'>VARCHAR(9) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c1a_1296c6fb.start' align='left'>C1a</td>
+		<td align='left'> </td>
+		<td port='c1a_1296c6fb.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c2a_1296c71a.start' align='left'>C2a</td>
+		<td align='left'> </td>
+		<td port='c2a_1296c71a.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c3a_1296c739.start' align='left'>C3a</td>
+		<td align='left'> </td>
+		<td port='c3a_1296c739.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c4a_1296c758.start' align='left'>C4a</td>
+		<td align='left'> </td>
+		<td port='c4a_1296c758.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c5a_1296c777.start' align='left'>C5a</td>
+		<td align='left'> </td>
+		<td port='c5a_1296c777.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c6a_1296c796.start' align='left'>C6a</td>
+		<td align='left'> </td>
+		<td port='c6a_1296c796.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c7a_1296c7b5.start' align='left'>C7a</td>
+		<td align='left'> </td>
+		<td port='c7a_1296c7b5.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c8a_1296c7d4.start' align='left'>C8a</td>
+		<td align='left'> </td>
+		<td port='c8a_1296c7d4.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c9a_1296c7f3.start' align='left'>C9a</td>
+		<td align='left'> </td>
+		<td port='c9a_1296c7f3.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c10a_12b4f827.start' align='left'>C10a</td>
+		<td align='left'> </td>
+		<td port='c10a_12b4f827.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c11a_12b4f846.start' align='left'>C11a</td>
+		<td align='left'> </td>
+		<td port='c11a_12b4f846.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c12a_12b4f865.start' align='left'>C12a</td>
+		<td align='left'> </td>
+		<td port='c12a_12b4f865.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c13a_12b4f884.start' align='left'>C13a</td>
+		<td align='left'> </td>
+		<td port='c13a_12b4f884.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c14a_12b4f8a3.start' align='left'>C14a</td>
+		<td align='left'> </td>
+		<td port='c14a_12b4f8a3.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c15a_12b4f8c2.start' align='left'>C15a</td>
+		<td align='left'> </td>
+		<td port='c15a_12b4f8c2.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c16a_12b4f8e1.start' align='left'>C16a</td>
+		<td align='left'> </td>
+		<td port='c16a_12b4f8e1.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c17a_12b4f900.start' align='left'>C17a</td>
+		<td align='left'> </td>
+		<td port='c17a_12b4f900.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c18a_12b4f91f.start' align='left'>C18a</td>
+		<td align='left'> </td>
+		<td port='c18a_12b4f91f.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c19a_12b4f93e.start' align='left'>C19a</td>
+		<td align='left'> </td>
+		<td port='c19a_12b4f93e.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c20a_12b4fbe8.start' align='left'>C20a</td>
+		<td align='left'> </td>
+		<td port='c20a_12b4fbe8.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c21a_12b4fc07.start' align='left'>C21a</td>
+		<td align='left'> </td>
+		<td port='c21a_12b4fc07.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c22a_12b4fc26.start' align='left'>C22a</td>
+		<td align='left'> </td>
+		<td port='c22a_12b4fc26.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c23a_12b4fc45.start' align='left'>C23a</td>
+		<td align='left'> </td>
+		<td port='c23a_12b4fc45.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c24a_12b4fc64.start' align='left'>C24a</td>
+		<td align='left'> </td>
+		<td port='c24a_12b4fc64.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c25a_12b4fc83.start' align='left'>C25a</td>
+		<td align='left'> </td>
+		<td port='c25a_12b4fc83.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c26a_12b4fca2.start' align='left'>C26a</td>
+		<td align='left'> </td>
+		<td port='c26a_12b4fca2.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c27a_12b4fcc1.start' align='left'>C27a</td>
+		<td align='left'> </td>
+		<td port='c27a_12b4fcc1.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c28a_12b4fce0.start' align='left'>C28a</td>
+		<td align='left'> </td>
+		<td port='c28a_12b4fce0.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c29a_12b4fcff.start' align='left'>C29a</td>
+		<td align='left'> </td>
+		<td port='c29a_12b4fcff.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c30a_12b4ffa9.start' align='left'>C30a</td>
+		<td align='left'> </td>
+		<td port='c30a_12b4ffa9.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c31a_12b4ffc8.start' align='left'>C31a</td>
+		<td align='left'> </td>
+		<td port='c31a_12b4ffc8.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c32a_12b4ffe7.start' align='left'>C32a</td>
+		<td align='left'> </td>
+		<td port='c32a_12b4ffe7.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c33a_12b50006.start' align='left'>C33a</td>
+		<td align='left'> </td>
+		<td port='c33a_12b50006.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c34a_12b50025.start' align='left'>C34a</td>
+		<td align='left'> </td>
+		<td port='c34a_12b50025.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='c35a_12b50044.start' align='left'>C35a</td>
+		<td align='left'> </td>
+		<td port='c35a_12b50044.end' align='left'>DECIMAL(11,5) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_denominazioni -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_denominazioni_c2e44642" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_denominazioni</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='id_denominazione_47b84c00.start' align='left'><b><i>id_denominazione</i></b></td>
+		<td align='left'> </td>
+		<td port='id_denominazione_47b84c00.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td align='left'></td>
+		<td align='left'> </td>
+		<td align='left'>auto-incremented</td>
+	</tr>
+	<tr>
+		<td port='denominazione_d7e0f824.start' align='left'>denominazione</td>
+		<td align='left'> </td>
+		<td port='denominazione_d7e0f824.end' align='left'>VARCHAR(255) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_fonti -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_fonti_4c691712" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_fonti</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='id_fonte_2df23900.start' align='left'><b><i>id_fonte</i></b></td>
+		<td align='left'> </td>
+		<td port='id_fonte_2df23900.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td align='left'></td>
+		<td align='left'> </td>
+		<td align='left'>auto-incremented</td>
+	</tr>
+	<tr>
+		<td port='fonte_468b4924.start' align='left'>fonte</td>
+		<td align='left'> </td>
+		<td port='fonte_468b4924.end' align='left'>VARCHAR(255) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='data_40e8bad8.start' align='left'>data</td>
+		<td align='left'> </td>
+		<td port='data_40e8bad8.end' align='left'>VARCHAR(15) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='data_cnf_ab618674.start' align='left'>data_cnf</td>
+		<td align='left'> </td>
+		<td port='data_cnf_ab618674.end' align='left'>VARCHAR(255) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_menu -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_menu_fa3869e5" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_menu</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='id_menu_af558cbe.start' align='left'>id_menu</td>
+		<td align='left'> </td>
+		<td port='id_menu_af558cbe.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='desc_menu_a5311508.start' align='left'>desc_menu</td>
+		<td align='left'> </td>
+		<td port='desc_menu_a5311508.end' align='left'>VARCHAR(100) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='longdesc_menu_de4fda0c.start' align='left'>longdesc_menu</td>
+		<td align='left'> </td>
+		<td port='longdesc_menu_de4fda0c.end' align='left'>LONGTEXT NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_professionali -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_professionali_d592f73a" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_professionali</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='cod_nup_14ecd048.start' align='left'>cod_nup</td>
+		<td align='left'> </td>
+		<td port='cod_nup_14ecd048.end' align='left'>INTEGER</td>
+	</tr>
+	<tr>
+		<td port='variabile_d7e16305.start' align='left'>variabile</td>
+		<td align='left'> </td>
+		<td port='variabile_d7e16305.end' align='left'>VARCHAR(3)</td>
+	</tr>
+	<tr>
+		<td port='id_menu_3f4caa09.start' align='left'>id_menu</td>
+		<td align='left'> </td>
+		<td port='id_menu_3f4caa09.end' align='left'>INTEGER</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_province -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_province_73df1436" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_province</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='cod_regione_40545ab4.start' align='left'>cod_regione</td>
+		<td align='left'> </td>
+		<td port='cod_regione_40545ab4.end' align='left'>VARCHAR(2) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='cod_provincia_4aadb430.start' align='left'>cod_provincia</td>
+		<td align='left'> </td>
+		<td port='cod_provincia_4aadb430.end' align='left'>VARCHAR(3) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='denom_provincia_fc8f51a3.start' align='left'>denom_provincia</td>
+		<td align='left'> </td>
+		<td port='denom_provincia_fc8f51a3.end' align='left'>VARCHAR(200) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='sigla_provincia_307f333e.start' align='left'>sigla_provincia</td>
+		<td align='left'> </td>
+		<td port='sigla_provincia_307f333e.end' align='left'>VARCHAR(2) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_regioni -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_regioni_3e1e06cd" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_regioni</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='cod_regione_bdf3bafd.start' align='left'>cod_regione</td>
+		<td align='left'> </td>
+		<td port='cod_regione_bdf3bafd.end' align='left'>VARCHAR(3) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='denom_regione_8e741930.start' align='left'>denom_regione</td>
+		<td align='left'> </td>
+		<td port='denom_regione_8e741930.end' align='left'>VARCHAR(150) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* fabbisogni_table -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "fabbisogni_table_4d27d4e6" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>fabbisogni_table</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='id_fabbisogni_table_b7e1f705.start' align='left'><b><i>id_fabbisogni_table</i></b></td>
+		<td align='left'> </td>
+		<td port='id_fabbisogni_table_b7e1f705.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td align='left'></td>
+		<td align='left'> </td>
+		<td align='left'>auto-incremented</td>
+	</tr>
+	<tr>
+		<td port='table_5e6303a8.start' align='left'>"table"</td>
+		<td align='left'> </td>
+		<td port='table_5e6303a8.end' align='left'>VARCHAR(255) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='desc_table_b5f747a.start' align='left'>desc_table</td>
+		<td align='left'> </td>
+		<td port='desc_table_b5f747a.end' align='left'>LONGTEXT NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='flag_cod_ateco_21be7fbe.start' align='left'>flag_cod_ateco</td>
+		<td align='left'> </td>
+		<td port='flag_cod_ateco_21be7fbe.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='flag_cod_nup_35232249.start' align='left'>flag_cod_nup</td>
+		<td align='left'> </td>
+		<td port='flag_cod_nup_35232249.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* livello1 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "livello1_548b8a6d" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>livello1</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello1_d5968705.start' align='left'><b><i>pk_livello1</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello1_d5968705.end' align='left'>CHAR(1) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_3d19724c.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_3d19724c.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='descrizione_d6a34882.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_d6a34882.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='help_3d169274.start' align='left'>help</td>
+		<td align='left'> </td>
+		<td port='help_3d169274.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* livello2 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "livello2_548b8a6e" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>livello2</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello2_d5968725.start' align='left'><b><i>pk_livello2</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello2_d5968725.end' align='left'>VARCHAR(3) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_3d19726b.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_3d19726b.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='descrizione_d6a348a1.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_d6a348a1.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='fk_livello1_4a78b9a.start' align='left'>fk_livello1</td>
+		<td align='left'> </td>
+		<td port='fk_livello1_4a78b9a.end' align='left'>CHAR(1)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* livello3 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "livello3_548b8a6f" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>livello3</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello3_d5968745.start' align='left'><b><i>pk_livello3</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello3_d5968745.end' align='left'>VARCHAR(5) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_3d19728a.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_3d19728a.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='descrizione_d6a348c0.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_d6a348c0.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='fk_livello2_4a78bba.start' align='left'>fk_livello2</td>
+		<td align='left'> </td>
+		<td port='fk_livello2_4a78bba.end' align='left'>VARCHAR(3)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* livello4 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "livello4_548b8a70" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>livello4</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello4_d5968765.start' align='left'><b><i>pk_livello4</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello4_d5968765.end' align='left'>VARCHAR(7) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_3d1972a9.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_3d1972a9.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='descrizione_d6a348df.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_d6a348df.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='fk_livello3_4a78bda.start' align='left'>fk_livello3</td>
+		<td align='left'> </td>
+		<td port='fk_livello3_4a78bda.end' align='left'>VARCHAR(5)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* livello5 -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "livello5_548b8a71" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>livello5</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello5_d5968785.start' align='left'><b><i>pk_livello5</i></b></td>
+		<td align='left'> </td>
+		<td port='pk_livello5_d5968785.end' align='left'>VARCHAR(255) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_3d1972c8.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_3d1972c8.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='descrizione_d6a348fe.start' align='left'>descrizione</td>
+		<td align='left'> </td>
+		<td port='descrizione_d6a348fe.end' align='left'>MEDIUMTEXT</td>
+	</tr>
+	<tr>
+		<td port='fk_livello4_4a78bfa.start' align='left'>fk_livello4</td>
+		<td align='left'> </td>
+		<td port='fk_livello4_4a78bfa.end' align='left'>VARCHAR(50)</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* professioni -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "professioni_43bfb34c" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>professioni</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='id_3436c34f.start' align='left'><b><i>id</i></b></td>
+		<td align='left'> </td>
+		<td port='id_3436c34f.end' align='left'>INTEGER NOT NULL</td>
+	</tr>
+	<tr>
+		<td align='left'></td>
+		<td align='left'> </td>
+		<td align='left'>auto-incremented</td>
+	</tr>
+	<tr>
+		<td port='pk_professioni_d4ae40dd.start' align='left'>pk_professioni</td>
+		<td align='left'> </td>
+		<td port='pk_professioni_d4ae40dd.end' align='left'>VARCHAR(12) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='nome_346a654d.start' align='left'>nome</td>
+		<td align='left'> </td>
+		<td port='nome_346a654d.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='fk_livello5_fbf87e80.start' align='left'>fk_livello5</td>
+		<td align='left'> </td>
+		<td port='fk_livello5_fbf87e80.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='anno_346478e2.start' align='left'>anno</td>
+		<td align='left'> </td>
+		<td port='anno_346478e2.end' align='left'>VARCHAR(4)</td>
+	</tr>
+	<tr>
+		<td port='provenienza_ecf1c91b.start' align='left'>provenienza</td>
+		<td align='left'> </td>
+		<td port='provenienza_ecf1c91b.end' align='left'>LONGTEXT</td>
+	</tr>
+	<tr>
+		<td port='pk_professioni_01_eb69298b.start' align='left'>pk_professioni_01</td>
+		<td align='left'> </td>
+		<td port='pk_professioni_01_eb69298b.end' align='left'>VARCHAR(12)</td>
+	</tr>
+	<tr>
+		<td port='nome_01_b2bd6f1b.start' align='left'>nome_01</td>
+		<td align='left'> </td>
+		<td port='nome_01_b2bd6f1b.end' align='left'>VARCHAR(255)</td>
+	</tr>
+	<tr>
+		<td port='codice_e371b847.start' align='left'>codice</td>
+		<td align='left'> </td>
+		<td port='codice_e371b847.end' align='left'>VARCHAR(1)</td>
+	</tr>
+	<tr>
+		<td port='flag_vista_6419262e.start' align='left'>flag_vista</td>
+		<td align='left'> </td>
+		<td port='flag_vista_6419262e.end' align='left'>LONGTEXT</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+  /* professioni_personalita -=-=-=-=-=-=-=-=-=-=-=-=-=- */
+  "professioni_personalita_e9c6e063" [
+    label=<
+      <table border="1" cellborder="0" cellspacing="0" color="#888888">
+	<tr>
+		<td colspan='2' bgcolor='#F2E9CE' align='left'><b><i>professioni_personalita</i></b></td>
+		<td bgcolor='#F2E9CE' align='right'>[table]</td>
+	</tr>
+	<tr>
+		<td port='pk_livello5_e7c5efd3.start' align='left'>pk_livello5</td>
+		<td align='left'> </td>
+		<td port='pk_livello5_e7c5efd3.end' align='left'>VARCHAR(15) NOT NULL</td>
+	</tr>
+	<tr>
+		<td port='titolo_di_studio_8b3522c1.start' align='left'>titolo_di_studio</td>
+		<td align='left'> </td>
+		<td port='titolo_di_studio_8b3522c1.end' align='left'>VARCHAR(100) NOT NULL</td>
+	</tr>
+      </table>
+    >
+  ];
+
+
+
+}
